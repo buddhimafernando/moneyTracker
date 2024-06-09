@@ -10,8 +10,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        primaryColor: Color.fromARGB(255, 0, 100, 0),
+        cardColor: Color.fromARGB(255, 247, 247, 247),
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+          headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w500),
+        )
+      ),
       home: SplashScreen(),
     );
   }
