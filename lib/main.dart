@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
         cardColor: Color.fromARGB(255, 247, 247, 247),
         textTheme: TextTheme(
           headline1: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-          headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w500),
+          headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
         )
       ),
       home: SplashScreen(),

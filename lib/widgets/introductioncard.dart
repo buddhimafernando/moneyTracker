@@ -25,7 +25,9 @@ class IntroductionCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30.0, right: 30.0),
               child: Text(title, 
               textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,),
                 ),
             ),
           ],

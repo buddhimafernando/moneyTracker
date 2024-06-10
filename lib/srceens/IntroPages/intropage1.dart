@@ -1,19 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:money_tracking/widgets/introductioncard.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class IntroPage1 extends StatelessWidget {
   const IntroPage1({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final PageController _controller = PageController();
+
     return Scaffold(
       body: Column(
-        children: const [
-          IntroductionCard(
-            title: "Welcome to Money Tracking App",
-            imagePath: "assets/introImages/intro1.png",
+        children:[
+        Expanded(
+          child: PageView(
+            scrollDirection: Axis.horizontal,
+            controller: _controller,
+            children: const [
+              IntroductionCard(
+                title:
+                    "Empowering you to take control of your expenses and simplify your financial journey!",
+                imagePath: "assets/introImages/intro1.png",
+              ),
+              IntroductionCard(
+                title:
+                    "Plan, track, and stay within your budget effortlessly. ",
+                imagePath: "assets/introImages/intro2.png",
+              ),
+              IntroductionCard(
+                title:
+                    "Unlock the power of easy expense tracking. Your financial freedom is just a scan away!",
+                imagePath: "assets/introImages/intro3.png",
+              ),
+            ],
           ),
-        ],
+        ),
+        Padding(
+            padding: const EdgeInsets.only(top: 30.0,bottom: 120.0),
+            child: SmoothPageIndicator(
+              controller: _controller,
+              count: 5, // Update count to match number of pages
+              effect: ExpandingDotsEffect(
+                activeDotColor: Color.fromARGB(255, 240, 127, 127),
+                dotColor: const Color.fromARGB(255, 249, 207, 207),
+                dotHeight: 9,
+                dotWidth: 9,
+              ),
+            ),
+          ),
+        ]
       ),
     );
   }
