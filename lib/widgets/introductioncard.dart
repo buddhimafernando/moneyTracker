@@ -15,7 +15,7 @@ class IntroductionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 200.0, left: 20.0, right: 20.0),
+      padding: const EdgeInsets.only(top: 180.0, left: 20.0, right: 20.0),
       child: Container(
         child: Column(
           children: [

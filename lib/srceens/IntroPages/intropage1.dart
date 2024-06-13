@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:money_tracking/srceens/home.dart';
+import 'package:money_tracking/widgets/custom_button.dart';
 import 'package:money_tracking/widgets/introductioncard.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -36,18 +38,25 @@ class IntroPage1 extends StatelessWidget {
           ),
         ),
         Padding(
-            padding: const EdgeInsets.only(top: 30.0,bottom: 120.0),
+            padding: const EdgeInsets.only(top: 30.0,bottom: 40.0),
             child: SmoothPageIndicator(
               controller: _controller,
-              count: 5, // Update count to match number of pages
+              count: 3, // Update count to match number of pages
               effect: ExpandingDotsEffect(
-                activeDotColor: Color.fromARGB(255, 240, 127, 127),
-                dotColor: const Color.fromARGB(255, 249, 207, 207),
+                activeDotColor: Color.fromARGB(255, 0, 100, 0),
+                dotColor: Color.fromARGB(255, 202, 202, 202),
                 dotHeight: 9,
                 dotWidth: 9,
               ),
             ),
           ),
+
+          Padding(
+            padding: const EdgeInsets.only(bottom: 70.0),
+            child: CustomButton(
+              page: const Home(),
+              text: "Continue"),
+          )
         ]
       ),
     );
