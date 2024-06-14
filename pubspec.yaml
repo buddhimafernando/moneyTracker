@@ -27,6 +27,7 @@ flutter:
     - assets/introImages/intro1.png
     - assets/introImages/intro2.png
     - assets/introImages/intro3.png
+    - assets/images/dp.jpg
 
   fonts:
   - family: Poppins
