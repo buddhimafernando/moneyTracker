@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_tracking/srceens/sample/pagination.dart';
 import 'package:money_tracking/srceens/splashcreen.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MainApp extends StatelessWidget {
           headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
         )
       ),
-      home: SplashScreen(),
+      home: SamplePagination(),
     );
   }
 }
