@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:money_tracking/cubit/posts_cubit.dart';
 import 'package:money_tracking/srceens/sample/pagination.dart';
 import 'package:money_tracking/srceens/splashcreen.dart';
 
@@ -11,18 +13,21 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Poppins',
-        primaryColor: Color.fromARGB(255, 0, 100, 0),
-        cardColor: Color.fromARGB(255, 247, 247, 247),
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-          headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
-        )
-      ),
-      home: SamplePagination(),
+          fontFamily: 'Poppins',
+          primaryColor: Color.fromARGB(255, 0, 100, 0),
+          cardColor: Color.fromARGB(255, 247, 247, 247),
+          textTheme: TextTheme(
+            headline1: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+            headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
+          )),
+      home: SamplePagination()
+      // home: BlocProvider(
+      //   create: (context) => PostsCubit(),
+      //   child: SamplePagination(),
+      // ),
     );
   }
 }
