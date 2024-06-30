@@ -22,6 +22,13 @@ class PostsCubit extends Cubit<PostsState> {
     }
     emit(PostsLoading(oldPosts, isFirstFetch: page == 1));
 
-    repository.fetchPosts(page);
+    repository.fetchPosts(page).then((newPosts) {
+      page++;
+
+      final posts = (state as PostsLoading).oldPosts;
+      posts.addAll(newPosts);
+
+      emit(PostsLoaded(posts));
+    });
   }
 }
