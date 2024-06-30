@@ -7,7 +7,8 @@ class PostRepository {
 
   PostRepository(this.service);
 
-  // Future<List<Post>>fetchPosts(int page) async {
-  //   service.fetchPosts(page);
-  // }
+  Future<List<Post>> fetchPosts(int page) async {
+    final posts = await service.fetchPosts(page);
+    return posts.map((e) => Post.fromJson(e)).toList();
+  }
 }

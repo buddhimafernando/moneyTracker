@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
           textTheme: TextTheme(
             headline1: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
-          )),
+           )),
       home: SamplePagination()
       // home: BlocProvider(
       //   create: (context) => PostsCubit(),
