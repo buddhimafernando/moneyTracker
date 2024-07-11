@@ -4,6 +4,7 @@ import 'package:money_tracking/cubit/posts_cubit.dart';
 import 'package:money_tracking/data/repositories/post_repository.dart';
 import 'package:money_tracking/data/services/posts_service.dart';
 import 'package:money_tracking/srceens/sample/pagination.dart';
+import 'package:money_tracking/srceens/sample/search.dart';
 import 'package:money_tracking/srceens/splashcreen.dart';
 
 void main() {
@@ -28,10 +29,11 @@ class MainApp extends StatelessWidget {
           headline2: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),
         ),
       ),
-      home: BlocProvider(
-        create: (context) => PostsCubit(repository),
-        child: PostsView(),
-      ),
+      home: Searching(),
+      // home: BlocProvider(
+      //   create: (context) => PostsCubit(repository),
+      //   child: PostsView(),
+      // ),
     );
   }
 }
